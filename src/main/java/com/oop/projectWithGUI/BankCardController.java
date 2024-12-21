@@ -267,12 +267,6 @@ public class BankCardController extends SwitchScenes{
         }
     }
 
-    public void setAllActions() {
-        getAccountCardType();
-        setCardDetails();
-        setPaymentHistory();
-    }
-
     public void setCardDetails() {
         if (rdCurrentCard.isSelected()) {
             if (currentCard != null) {
@@ -284,6 +278,12 @@ public class BankCardController extends SwitchScenes{
                 lbCardLimit.setText(String.valueOf(currentCard.getCreditLimit()));
                 lbCardStatus.setText(String.valueOf(currentCard.getStatus()));
                 lbCardCVV.setText(String.valueOf(currentCard.getCVV()));
+                setPaymentHistory();
+            } else {
+                showAlert(Alert.AlertType.ERROR, "You Don't Have Card for Current Account",
+                        "Card Error");
+                updateScene();
+                return;
             }
         } else {
             if (savingCard != null) {
@@ -295,6 +295,12 @@ public class BankCardController extends SwitchScenes{
                 lbCardLimit.setText(String.valueOf(savingCard.getCreditLimit()));
                 lbCardStatus.setText(String.valueOf(savingCard.getStatus()));
                 lbCardCVV.setText(String.valueOf(savingCard.getCVV()));
+                setPaymentHistory();
+            } else {
+                showAlert(Alert.AlertType.ERROR, "You Don't Have Card for Savings Account",
+                        "Card Error");
+                updateScene();
+                return;
             }
         }
 
@@ -603,24 +609,6 @@ public class BankCardController extends SwitchScenes{
             return "MasterCard";
         } else {
             return null;
-        }
-    }
-
-    public void getAccountCardType() {
-        if (currentCard == null) {
-            if (rdCurrentCard.isSelected()) {
-                showAlert(Alert.AlertType.ERROR, "You Don't Have Card for Current Account",
-                        "Card Error");
-                updateScene();
-                return;
-            }
-        } else if (savingCard == null) {
-            if (rdSavingCard.isSelected()) {
-                showAlert(Alert.AlertType.ERROR, "You Don't Have Card for Savings Account",
-                        "Card Error");
-                updateScene();
-                return;
-            }
         }
     }
 
