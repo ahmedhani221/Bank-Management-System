@@ -1,7 +1,7 @@
 # Bank Management System
 
 ## Overview
-The **Bank Management System** is a comprehensive desktop application designed to streamline banking operations and cater to various user roles: Clients, Employees, and Admins. Built with **JavaFX**, **Bootstrap**, and **SQL Server**, this application provides a robust and user-friendly interface for managing accounts, transactions, and banking services.
+The **Bank Management System** is a comprehensive desktop application designed to streamline banking operations and cater to various user roles: Clients, Employees, and Admins. Built with **JavaFX**, **CSS**, this application provides a robust and user-friendly interface for managing accounts, transactions, and banking services.
 
 ## User Roles and Features
 
