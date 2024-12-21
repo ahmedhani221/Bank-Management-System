@@ -650,4 +650,5 @@ public class BankCardController extends SwitchScenes{
     public String getCardCategory() {
         return cmCardCategory.getValue();
     }
+
 }
