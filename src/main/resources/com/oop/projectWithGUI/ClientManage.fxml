@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.projectWithGUI.ClientManageController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane layoutX="200.0" layoutY="66.0" prefHeight="635.0" prefWidth="700.0">
+               <children>
+                  <TabPane layoutX="110.0" layoutY="36.0" prefHeight="635.0" prefWidth="700.0" stylesheets="@ClientDesign.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="My Details">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="229.0" layoutY="14.0" text="My Account Info" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="90.0" text="First Name:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="203.0" layoutY="130.0" text="Last Name:" textFill="#3886d6" AnchorPane.rightAnchor="355.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="170.0" text="User Name:" textFill="#3886d6" AnchorPane.rightAnchor="353.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="210.0" text="Phone:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="250.0" text="Savings Account Number:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="290.0" text="Current Account Number:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbFirstName" layoutX="330.0" layoutY="90.0" text="First Name:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbLastName" layoutX="330.0" layoutY="130.0" text="Last Name:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbUserName" layoutX="330.0" layoutY="170.0" text="User Name:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbPhone" layoutX="330.0" layoutY="210.0" text="Phone:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbSavingsNum" layoutX="330.0" layoutY="250.0" text="Savings Account Number:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCurrentNum" layoutX="330.0" layoutY="290.0" text="Current Account Number:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Edit My Details">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="204.0" layoutY="14.0" text="Edit My Account Info" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="90.0" text="First Name:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="203.0" layoutY="130.0" text="Last Name:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="170.0" text="User Name:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="210.0" text="Phone:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="250.0" text="Savings Account Number:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="200.0" layoutY="290.0" text="Current Account Number:" textFill="#3886d6" AnchorPane.rightAnchor="356.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txEditFirstName" layoutX="330.0" layoutY="89.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <TextField fx:id="txEditLastName" layoutX="330.0" layoutY="129.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <TextField fx:id="txEditPhone" layoutX="330.0" layoutY="209.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <Label fx:id="lbEditUserName" layoutX="330.0" layoutY="170.0" text="User Name:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbEditSavingsNum" layoutX="330.0" layoutY="250.0" text="Savings Account Number:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbEditCurrentNum" layoutX="330.0" layoutY="290.0" text="Current Account Number:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="293.0" layoutY="350.0" mnemonicParsing="false" onAction="#updateClientDetails" styleClass="actions-btn" stylesheets="@ClientDesign.css" text="Submit" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+                <AnchorPane prefHeight="700.0" prefWidth="200.0" styleClass="left-form" stylesheets="@ClientDesign.css">
+                    <children>
+                        <Label layoutX="90.0" layoutY="285.0" text="Home" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="335.0" text="Loan" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="385.0" text="Bank Card" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="435.0" text="Transactions" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="619.0" text="Logout" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="home" layoutX="30.0" layoutY="275.0" mnemonicParsing="false" onAction="#SwitchToHome" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="loan" layoutX="30.0" layoutY="325.0" mnemonicParsing="false" onAction="#SwitchToLoan" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/loan.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="logout" layoutX="30.0" layoutY="610.0" mnemonicParsing="false" onAction="#SwitchToLogin" styleClass="buttons" stylesheets="@ClientDesign.css">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="bankCard" layoutX="30.0" layoutY="375.0" mnemonicParsing="false" onAction="#SwitchToBankCard" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/card.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Label layoutX="32.8" layoutY="90.0" text="NCCA Bank" textFill="WHITE" AnchorPane.topAnchor="90.0">
+                            <font>
+                                <Font name="Segoe UI Bold" size="25.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="transaction" layoutX="30.0" layoutY="425.0" mnemonicParsing="false" onAction="#SwitchToTransaction" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/transactions.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="200.0" prefHeight="65.0" prefWidth="700.0" styleClass="top-form" stylesheets="@ClientDesign.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label fx:id="lblGreeting" layoutX="520.0" layoutY="21.0" prefHeight="19.0" prefWidth="100.0" text="Hi, User" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="634.0" layoutY="4.0" mnemonicParsing="false" onAction="#SwitchToUser" styleClass="buttons" stylesheets="@ClientDesign.css">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/account.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

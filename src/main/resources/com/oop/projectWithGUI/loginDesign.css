@@ -1,0 +1,56 @@
+.close{
+    -fx-background-color:transparent;
+    -fx-background-radius:40px;
+    -fx-cursor:hand;
+    -fx-border-radius:40px;
+}
+
+.close:hover{
+    -fx-background-color:#d8dde1;
+}
+
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right, #d8dde1, #3886d6);
+    -fx-border-color:#000;
+    -fx-border-width:.4px 0px .4px .4px;
+}
+
+.right-form{
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .4px 0px;
+}
+
+.textfield{
+    -fx-background-radius:4px;
+    -fx-border-color:#3886d6;
+    -fx-border-width:.4px;
+    -fx-border-radius:4px;
+    -fx-font-size:13px;
+    -fx-font-family:"Arial";
+
+}
+.textfield:focused{
+    -fx-background-color:#fff;
+    -fx-border-color:linear-gradient(to bottom right, #3886d6, #d8dde1);
+    -fx-border-width:.8px;
+}
+
+.login-btn{
+    -fx-background-color:transparent;
+    -fx-background-radius:20px;
+    -fx-border-color:#3886d6;
+    -fx-border-radius:20px;
+    -fx-border-width:.4px;
+    -fx-text-fill:#3886d6;
+    -fx-font-size:12px;
+    -fx-font-family:"Arial";
+    -fx-cursor:hand;
+}
+.login-btn:hover{
+    -fx-background-color:#d8dde1;
+}
+
+.passwordTrials{
+    -fx-alignment: center;
+}

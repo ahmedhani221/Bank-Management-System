@@ -1,0 +1,4 @@
+Account Number,Account's ClientID,Account Type,Account Status,Account Balance,Account Interest Rate,Account Interest Type,Max Transactions,Number Of Transactions
+S101,C11,Saving,Active,19000.00,0.25,Monthly,5,2
+S102,C12,Saving,Frozen,99000.00,0.10,idk,5,6
+S103,C13,Saving,Closed,200.00,0.25,Yearly,5,0

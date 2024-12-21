@@ -1,0 +1,261 @@
+.actions-btn{
+    -fx-background-color:transparent;
+    -fx-background-radius:20px;
+    -fx-border-color:#3886d6;
+    -fx-border-radius:20px;
+    -fx-border-width:.4px;
+    -fx-text-fill:#3886d6;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+    -fx-cursor:hand;
+}
+.actions-btn:hover{
+    -fx-background-color:#d8dde1;
+}
+
+.buttons{
+    -fx-background-color:transparent;
+    -fx-background-radius:45px;
+    -fx-cursor:hand;
+    -fx-border-radius:45px;
+}
+
+.currency-btn{
+    -fx-background-color:transparent;
+    -fx-background-radius:20px;
+    -fx-border-color:#3886d6;
+    -fx-border-radius:20px;
+    -fx-border-width:.4px;
+    -fx-text-fill:#3886d6;
+    -fx-cursor:hand;
+}
+
+.buttons:hover{
+    -fx-background-color:#a4c3e1;
+}
+
+.SelectedButton{
+    -fx-background-color:#84bffa;
+    -fx-background-radius:45px;
+    -fx-cursor:hand;
+    -fx-border-radius:45px;
+}
+
+.top-form{
+    -fx-background-color:#023e8a;
+    -fx-border-color:#000000;
+    -fx-border-width:.4px .4px 0px 0px;
+}
+
+.left-form{
+    -fx-background-color:#023e8a;
+    -fx-border-color:#000000;
+    -fx-border-width:.4px 0px .4px .4px;
+}
+
+.tab-pane {
+    -fx-background-color: #f4f4f9;
+    -fx-border-color: #d1d1e0;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+}
+
+.tab {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8px 12px;         /* Tab padding */
+    -fx-border-radius: 5px 5px 5px 5px; /* Rounded top corners */
+}
+
+.tab:selected {
+    -fx-background-color: #3886d6; /* Blue background for selected tab */
+    -fx-text-fill: #ffffff;        /* White text color for selected tab */
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px 5px 5px 5px; /* Keep the rounded top corners */
+}
+
+.tab:hover {
+    -fx-background-color: #e3e3e3; /* Slight hover effect for tabs */
+}
+
+.tab-header-area {
+    -fx-background-color: #d1d1e0; /* Background for the tab header area */
+    -fx-padding: 10px;             /* Add padding around the tab header */
+    -fx-border-color: transparent transparent #d1d1e0 transparent; /* Bottom border */
+}
+
+.tab-content-area {
+    -fx-background-color: #ffffff; /* White background for content area */
+    -fx-padding: 15px;             /* Content padding */
+    -fx-border-color: #d1d1e0;     /* Border color for content area */
+    -fx-border-width: 1px;
+    -fx-border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+}
+
+/* Style for the VBox container */
+.vbox-group {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3886d6;
+    -fx-border-radius: 10px;
+    -fx-border-width:.4px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-alignment: center-left;
+}
+
+.vbox-group2 {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3886d6;
+    -fx-border-radius: 10px;
+    -fx-border-width:.4px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+}
+
+.vbox-group3 {
+    -fx-background-color: transparent;
+    -fx-border-color: #3886d6;
+    -fx-border-radius: 10px;
+    -fx-border-width:.4px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+}
+
+/* Style for the Label */
+.group-label {
+    -fx-font-size: 16px;           /* Slightly larger font size */
+    -fx-font-weight: bold;         /* Bold text */
+    -fx-text-fill: #3886d6;        /* Dark text color */
+    -fx-padding: 0 0 10px 0;       /* Space below the label */
+}
+
+/* Style for the RadioButtons */
+.radio-buttons {
+    -fx-font-size: 14px;           /* Font size */
+    -fx-text-fill: #555555;        /* Neutral text color */
+    -fx-padding: 5px;              /* Padding around the text */
+    -fx-border-radius: 5px;
+}
+
+.radio-buttons:selected {
+    -fx-mark-color: #3886d6;
+    -fx-border-radius: 5px;
+}
+
+/* Style for the Spinner container */
+/* Base styling for the spinner */
+.spinner {
+    -fx-background-radius:4px;
+    -fx-border-color:#3886d6;
+    -fx-border-width:.4px;
+    -fx-border-radius:4px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0.2, 2, 2);
+}
+
+/* Styling for the text field inside the spinner */
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333; /* Dark text */
+    -fx-border-width: 0;
+    -fx-font-size: 14px;
+    -fx-padding: 3px;
+}
+
+.spinner:focused{
+    -fx-background-color:#fff;
+    -fx-border-color:linear-gradient(to bottom right, #3886d6, #d8dde1);
+    -fx-border-width:.8px;
+}
+
+/* Styling the increment and decrement arrow buttons */
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-radius: 50%; /* Circular buttons */
+    -fx-background-color:transparent;
+    -fx-border-width: 0;
+    -fx-padding: 4px; /* Adjust padding */
+    -fx-text-fill: white; /* White arrow */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0.3, 1, 1);
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #d1d1e0;
+    -fx-cursor: hand;
+}
+
+/* General styling for the table view */
+.table-view {
+    -fx-background-color: #f0f4f8; /* Light gray-blue background */
+    -fx-border-color: #cfd8dc;     /* Light gray border */
+    -fx-border-width: 1px;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+}
+
+/* Style for table header */
+.table-view .column-header {
+    -fx-background-color: #ced4da; /* Blue background */
+    -fx-text-fill: #ffffff;          /* White text */
+    -fx-font-weight: bold;
+    -fx-alignment: center;         /* Center-align text */
+    -fx-border-color: #0d47a1;     /* Darker blue border */
+    -fx-border-width: 0 0 1px 0;
+}
+
+/* Style for table rows */
+.table-view .table-row-cell {
+    -fx-background-color: transparent; /* Default transparent background */
+    -fx-border-width: 0;
+    -fx-padding: 5px;                  /* Add padding for better spacing */
+}
+
+/* Alternate row colors */
+.table-view .table-row-cell:odd {
+    -fx-background-color: #e9ecef; /* Very light blue */
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #f8f9fa; /* Light gray */
+}
+
+/* Highlight row on hover */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #dee2e6; /* Light blue on hover */
+}
+
+/* Style for selected row */
+.table-view .table-row-cell:focused,
+.table-view .table-row-cell:selected {
+    -fx-background-color: #bbdefb; /* Medium blue for selection */
+    -fx-text-fill: white;          /* White text */
+}
+
+/* Customize table cell content */
+.table-view .cell {
+    -fx-text-fill: #455a64;        /* Dark gray text */
+    -fx-alignment: center-left;    /* Left-align text */
+    -fx-padding: 5px;              /* Padding inside cells */
+}
+
+/* Resize handle for columns */
+.table-view .resize-corner {
+    -fx-background-color: #cfd8dc; /* Light gray corner handle */
+}
+
+/* Scroll bars */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #90a4ae; /* Gray scrollbar thumb */
+    -fx-background-insets: 0;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #607d8b; /* Darker gray on hover */
+}

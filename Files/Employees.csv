@@ -1,0 +1,5 @@
+EmployeeID,First Name,Last Name,Username,Password,Address,Position,Graduated College,Year of Graduation,Total Grade
+E101,Ahmed,Ibrahim,Emp1,1234,Egypt,Employee,ASU,2027,A
+E102,Kareem,Mahmoud,Emp2,1234,Egypt,Employee,FCIS,2025,A
+A103,Ibrahim,Mahmoud,Admin,Admin,Egypt,Admin,FCIS,2023,A+
+A3101,Nadeen,Mohamed,Emp3,1234,Cairo,Admin,FCIS,2027,A+

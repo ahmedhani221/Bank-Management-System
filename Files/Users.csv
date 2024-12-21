@@ -1,0 +1,9 @@
+ID,First Name,Last Name,Username,Password,UserType
+C11,Omar,Ahmed,User1,1234,Client
+C12,Ahmed,Hani,User2,1234,Client
+C13,Kareem,Essam,User3,kareemEssam,Client
+C14,Ibrahim,Ahmed,koko,wawa,Client
+E101,Ahmed,Ibrahim,Emp1,1234,Employee
+E102,Kareem,Mahmoud,Emp2,1234,Employee
+A103,Ibrahim,Mahmoud,Admin,Admin,Employee
+A3101,Nadeen,Mohamed,Emp3,1234,Employee

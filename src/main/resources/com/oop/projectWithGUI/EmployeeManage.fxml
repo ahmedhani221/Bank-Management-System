@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.projectWithGUI.EmployeeManageController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane prefHeight="700.0" prefWidth="200.0" styleClass="left-form" stylesheets="@ClientDesign.css">
+                    <children>
+                        <Button fx:id="home" layoutX="30.0" layoutY="270.0" mnemonicParsing="false" onAction="#SwitchToEmployeeHome" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="loan" layoutX="30.0" layoutY="340.0" mnemonicParsing="false" onAction="#SwitchToEmployeeClients" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/client.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="logout" layoutX="73.6" layoutY="510.0" mnemonicParsing="false" onAction="#SwitchToLogin" styleClass="buttons" stylesheets="@ClientDesign.css" AnchorPane.bottomAnchor="50.0">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Label layoutX="33.0" layoutY="90.0" text="NCCA Bank" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="25.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="transaction" layoutX="30.0" layoutY="410.0" mnemonicParsing="false" onAction="#SwitchToEmployeeTransactions" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/transactions.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                        </Button>
+                  <Label layoutX="86.0" layoutY="279.0" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="349.0" text="Clients" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="419.0" text="Transactions" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="199.20000000000005" layoutY="-1.0" prefHeight="65.0" prefWidth="700.0" styleClass="top-form" stylesheets="@ClientDesign.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                    <children>
+                        <Label fx:id="lblGreeting" layoutX="520.0" layoutY="21.0" text="Hi, User" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="633.0" layoutY="3.0" mnemonicParsing="false" styleClass="buttons" stylesheets="@ClientDesign.css">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/account.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="200.0" layoutY="65.0" prefHeight="635.0" prefWidth="700.0">
+               <children>
+                  <TabPane layoutX="70.0" layoutY="69.0" prefHeight="635.2" prefWidth="700.0" stylesheets="@ClientDesign.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Edit My Details">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="200.0" layoutY="84.0" text="First Name:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="268.0" layoutY="164.0" text="ID:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="197.0" layoutY="244.0" text="User Name:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="222.0" layoutY="284.0" text="Position:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="226.0" layoutY="324.0" text="Collage:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="138.0" layoutY="404.0" text="Year of graduation:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="216.0" layoutY="14.0" text="Edit Employee Info" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfEditFname" layoutX="323.0" layoutY="83.0" styleClass="textfield" stylesheets="@loginDesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="222.0" layoutY="204.0" text="Address:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfEditAdd" layoutX="323.0" layoutY="203.0" styleClass="textfield" stylesheets="@loginDesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="tfEditCollage" layoutX="323.0" layoutY="323.0" styleClass="textfield" stylesheets="@loginDesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="tfEditYOG" layoutX="323.0" layoutY="404.0" styleClass="textfield" stylesheets="@loginDesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="202.0" layoutY="124.0" text="Last Name:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfEditLname" layoutX="323.0" layoutY="123.0" styleClass="textfield" stylesheets="@loginDesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label fx:id="lbEditEmpID" layoutX="323.0" layoutY="164.0" text="ID">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbEditUserName" layoutX="323.0" layoutY="244.0" text="User Name">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbEditPosition" layoutX="323.0" layoutY="284.0" text="Position">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="291.0" layoutY="462.0" mnemonicParsing="false" onAction="#updateEmpDetails" styleClass="actions-btn" stylesheets="@ClientDesign.css" text="Submit" AnchorPane.bottomAnchor="14.0" />
+                                    <Label layoutX="238.0" layoutY="364.0" text="Grade:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="chBoxEditGrade" layoutX="323.0" layoutY="363.0" prefWidth="150.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.projectWithGUI.BankCardController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane layoutX="200.0" prefHeight="65.0" prefWidth="700.0" styleClass="top-form" stylesheets="@ClientDesign.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label fx:id="lbGreeting" layoutX="520.0" layoutY="21.0" text="Hi, User" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="528.0" layoutY="6.0" mnemonicParsing="false" onAction="#SwitchToUser" styleClass="buttons" stylesheets="@ClientDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                            <graphic>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/account.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="700.0" prefWidth="200.0" styleClass="left-form" stylesheets="@ClientDesign.css">
+                    <children>
+                        <Button fx:id="home" layoutX="30.0" layoutY="275.0" mnemonicParsing="false" onAction="#SwitchToHome" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE" AnchorPane.bottomAnchor="383.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="275.0">
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="loan" layoutX="30.0" layoutY="325.0" mnemonicParsing="false" onAction="#SwitchToLoan" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE" AnchorPane.bottomAnchor="333.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="325.0">
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/loan.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="logout" layoutX="30.0" layoutY="610.0" mnemonicParsing="false" onAction="#SwitchToLogin" styleClass="buttons" stylesheets="@ClientDesign.css" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="610.0">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="bankCard" layoutX="30.0" layoutY="375.0" mnemonicParsing="false" styleClass="SelectedButton" stylesheets="@ClientDesign.css" textFill="WHITE" AnchorPane.bottomAnchor="283.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="375.0">
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/card.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="transaction" layoutX="30.0" layoutY="425.0" mnemonicParsing="false" onAction="#SwitchToTransaction" styleClass="buttons" stylesheets="@ClientDesign.css" textFill="WHITE" AnchorPane.bottomAnchor="233.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="425.0">
+                            <font>
+                                <Font name="Segoe UI Bold" size="15.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../Icons/transactions.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Label layoutX="32.8" layoutY="90.0" text="NCCA Bank" textFill="WHITE" AnchorPane.topAnchor="90.0">
+                            <font>
+                                <Font name="Segoe UI Bold" size="25.0" />
+                            </font>
+                        </Label>
+                  <Label layoutX="90.0" layoutY="285.0" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="335.0" text="Loan" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="385.0" text="Bank Card" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="85.0" layoutY="435.0" text="Transactions" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="90.0" layoutY="619.0" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="200.0" layoutY="66.0" prefHeight="535.0" prefWidth="600.0">
+               <children>
+                  <TabPane fx:id="cardTabPane" layoutY="-1.0" prefHeight="635.0" prefWidth="700.0" stylesheets="@ClientDesign.css" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="askTab" text="Ask for Bank Card">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="506.0" prefWidth="558.0" stylesheets="@ClientDesign.css">
+                                 <children>
+                                    <Button fx:id="btSend" layoutX="302.0" layoutY="470.0" mnemonicParsing="false" onAction="#askForCard" styleClass="actions-btn" stylesheets="@ClientDesign.css" text="Send" />
+                                    <TextField fx:id="txHolderName" layoutX="310.0" layoutY="89.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <RadioButton fx:id="rdVisa" layoutX="310.0" layoutY="137.0" mnemonicParsing="false" onAction="#getCardType" styleClass="radio-buttons" stylesheets="@loginDesign.css" text="Visa">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="CardType" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="rdMasterCard" layoutX="375.0" layoutY="137.0" mnemonicParsing="false" onAction="#getCardType" styleClass="radio-buttons" stylesheets="@loginDesign.css" text="MasterCard" toggleGroup="$CardType" />
+                                    <ChoiceBox fx:id="cmCardCategory" layoutX="310.0" layoutY="189.0" prefWidth="150.0" />
+                                    <PasswordField fx:id="txPassword" layoutX="310.0" layoutY="239.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <Label layoutX="175.0" layoutY="90.0" text="Holder Name:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="201.0" layoutY="140.0" text="Card Type:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="168.0" layoutY="190.0" text="Card Category:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="207.0" layoutY="240.0" text="Password:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="205.0" layoutY="14.0" text="Make Your Bank Card" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="221.0" layoutY="290.0" prefHeight="165.0" prefWidth="214.0" spacing="15.0" styleClass="vbox-group" stylesheets="@loginDesign.css">
+                                       <children>
+                                          <Label fx:id="lblAccOption1" styleClass="group-label" stylesheets="@loginDesign.css" text="New Card Option:" textFill="#3886d6">
+                                             <font>
+                                                <Font name="Segoe UI Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="rdNewSavingCard" mnemonicParsing="false" onAction="#getNewAccountCardType" styleClass="radio-buttons" stylesheets="@loginDesign.css" text="Savings Account Card">
+                                             <font>
+                                                <Font name="Segoe UI" size="12.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="newCard" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="rdNewCurrentCard" mnemonicParsing="false" onAction="#getNewAccountCardType" styleClass="radio-buttons" stylesheets="@loginDesign.css" text="Current Account Card" toggleGroup="$newCard" />
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="detailsTab" text="Bank Card Details">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="224.0" layoutY="14.0" text="Bank Card Details" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="302.0" layoutY="90.0" text="Card Number:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="261.0" layoutY="130.0" text="Card Holder Name:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="329.0" layoutY="170.0" text="Card Type:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="296.0" layoutY="210.0" text="Card Category:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="320.0" layoutY="250.0" text="Expiry Date:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="318.0" layoutY="290.0" text="Credit Limit:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="361.0" layoutY="330.0" text="Status:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardNumber" layoutX="451.0" layoutY="90.0" text="Card Number:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardHolderName" layoutX="451.0" layoutY="130.0" text="Card Holder Name:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardType" layoutX="451.0" layoutY="170.0" text="Card Type:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardCategory" layoutX="451.0" layoutY="210.0" text="Card Category:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardExpiryDate" layoutX="451.0" layoutY="250.0" text="Expiry Date:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardLimit" layoutX="451.0" layoutY="290.0" text="Credit Limit:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardStatus" layoutX="451.0" layoutY="330.0" text="Status:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="376.0" layoutY="370.0" text="CVV:" textFill="#3886d6" AnchorPane.rightAnchor="232.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbCardCVV" layoutX="451.0" layoutY="370.0" text="CVV:">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox layoutX="20.0" layoutY="150.0" prefHeight="165.0" prefWidth="214.0" spacing="15.0" styleClass="vbox-group" stylesheets="@loginDesign.css">
+                                       <children>
+                                          <Label fx:id="lblAccOption" styleClass="group-label" stylesheets="@loginDesign.css" text="Card Option:" textFill="#3886d6">
+                                             <font>
+                                                <Font name="Segoe UI Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="rdSavingCard" mnemonicParsing="false" onAction="#setAllActions" styleClass="radio-buttons" stylesheets="@loginDesign.css" text="Savings Account Card">
+                                             <font>
+                                                <Font name="Segoe UI" size="12.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="accountType" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="rdCurrentCard" mnemonicParsing="false" onAction="#setAllActions" styleClass="radio-buttons" stylesheets="@loginDesign.css" text="Current Account Card" toggleGroup="$accountType" />
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="historyTab" text="Payment History">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tbPaymentHistory" prefHeight="521.0" prefWidth="646.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="tbDateColumn" prefWidth="320.0" text="Date" />
+                                        <TableColumn fx:id="tbPaymentColumn" minWidth="0.0" prefWidth="320.0" text="Payment" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="actionTab" text="Actions">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="430.0" layoutY="99.0" text="Amount:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="430.0" layoutY="179.0" text="Password:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txPayPassword" layoutX="430.0" layoutY="202.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <Label layoutX="430.0" layoutY="255.0" text="CVV:" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txPayCVV" layoutX="430.0" layoutY="278.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <Button fx:id="btPay" layoutX="490.0" layoutY="335.0" mnemonicParsing="false" onAction="#clickPay" styleClass="actions-btn" stylesheets="@ClientDesign.css" text="Pay">
+                                       <font>
+                                          <Font name="Segoe UI" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="txPayAmount" layoutX="430.0" layoutY="122.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                    <VBox layoutX="34.0" layoutY="122.0" prefHeight="141.0" prefWidth="186.0" styleClass="vbox-group2" stylesheets="@loginDesign.css">
+                                       <children>
+                                          <Label text="Card Action" textFill="#3886d6">
+                                             <font>
+                                                <Font name="Segoe UI Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btDisable" mnemonicParsing="false" onAction="#clickDisable" styleClass="actions-btn" stylesheets="@ClientDesign.css" text="Disable Bank Card" />
+                                          <Button fx:id="btActivate" mnemonicParsing="false" onAction="#clickActivate" styleClass="actions-btn" text="Activate Bank Card" />
+                                          <Button fx:id="btRenew" mnemonicParsing="false" onAction="#clickRenew" styleClass="actions-btn" stylesheets="@ClientDesign.css" text="Renew Bank Card" />
+                                       </children>
+                                    </VBox>
+                                    <Label layoutX="220.0" layoutY="14.0" text="Bank Card Actions" textFill="#3886d6">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
