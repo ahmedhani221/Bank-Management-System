@@ -151,7 +151,7 @@ public class LoanController extends SwitchScenes {
         ChBox_LoanTerm.getItems().addAll(LoanTerm);
         ChBox_LoanType.getItems().addAll(LoanType);
 
-        lbFullName.setText(String.valueOf(currentClient.getFullName()));
+        lbFullName.setText(currentClient.getFullName());
         lbPhoneNum.setText(String.valueOf(currentClient.getPhoneNum()));
         loan = Loan.findLoans(loans, currentClient.getID());
 
@@ -261,7 +261,7 @@ public class LoanController extends SwitchScenes {
     public void LoanDetails() {
         // Loan Details view.
         lbLoanID.setText(String.valueOf(loan.getLoanID()));
-        lbName.setText(loan.getBorrowerName());
+        lbName.setText(currentClient.getFullName());
         lbLoanAmount.setText(String.valueOf(loan.getLoanAmount()) + " $");
         lbLoanStatus.setText(loan.getLoanStatus());
         lbLoanTerm.setText(String.valueOf(loan.getLoanTerm()) + " Months");
