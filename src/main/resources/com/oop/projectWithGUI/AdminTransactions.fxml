@@ -112,7 +112,7 @@
             </AnchorPane>
             <AnchorPane layoutX="200.0" prefHeight="65.0" prefWidth="700.0" styleClass="top-form" stylesheets="@ClientDesign.css">
                <children>
-                  <Button layoutX="528.0" layoutY="6.0" mnemonicParsing="false" styleClass="buttons" stylesheets="@ClientDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                  <Button layoutX="528.0" layoutY="6.0" mnemonicParsing="false" onAction="#SwitchToAdmin" styleClass="buttons" stylesheets="@ClientDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>

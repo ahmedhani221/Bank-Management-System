@@ -15,8 +15,7 @@ import static com.oop.projectWithGUI.CSVController.*;
 import static com.oop.projectWithGUI.LoginController.currentEmployee;
 
 
-public class AdminClientsController extends SwitchScenes
-{
+public class AdminClientsController extends SwitchScenes {
     private String[] interestType = {"Monthly", "Yearly"};
 
     public static Client selectedClient = null;
@@ -213,11 +212,8 @@ public class AdminClientsController extends SwitchScenes
     @FXML
     private Spinner<Double> spinnerSavingBalance;
 
-/* ------------------------------------------------------------------------------------------- */
-
     @FXML
-    public void initialize()
-    {
+    public void initialize() {
         lblGreeting.setText(String.format("Hi, %s", currentEmployee.getFirstName()));
         updateScene();
         populateTableView();
@@ -238,16 +234,14 @@ public class AdminClientsController extends SwitchScenes
 
     }
 
-    private void updateScene()
-    {
+    private void updateScene() {
         clearAllFields();
         resetScene();
         populateTableView();
         populateComboBoxes();
     }
 
-    private void resetScene()
-    {
+    private void resetScene() {
         TfUpdInterestRate.clear();
         TfUpdUsername.clear();
         TfUpdPassword.clear();
@@ -277,12 +271,10 @@ public class AdminClientsController extends SwitchScenes
         CbSavingsAddInterestType.setValue("");
         CbUpdInterestType.setValue("");
 
-        if (spinnerCurrentBalance.getValueFactory() != null)
-        {
+        if (spinnerCurrentBalance.getValueFactory() != null) {
             spinnerCurrentBalance.getValueFactory().setValue(0.0);
         }
-        if (spinnerSavingBalance.getValueFactory() != null)
-        {
+        if (spinnerSavingBalance.getValueFactory() != null) {
             spinnerSavingBalance.getValueFactory().setValue(0.0);
         }
 
@@ -293,41 +285,35 @@ public class AdminClientsController extends SwitchScenes
         hideAll();
     }
 
-    private void setVisibility(TextField t)
-    {
+    private void setVisibility(TextField t) {
         t.setDisable(false);
         t.setOpacity(1);
     }
 
-    private void setVisibility(ChoiceBox<String> c)
-    {
+    private void setVisibility(ChoiceBox<String> c) {
         c.setDisable(false);
         c.setOpacity(1);
     }
 
-    private void setVisibility(Label l)
-    {
+    private void setVisibility(Label l) {
         l.setOpacity(1);
     }
 
-    private void hide(TextField t)
-    {
+    private void hide(TextField t) {
         t.setDisable(true);
         t.setOpacity(0);
     }
 
-    private void hide(ChoiceBox<String> c)
-    {
+    private void hide(ChoiceBox<String> c) {
         c.setDisable(true);
         c.setOpacity(0);
     }
 
-    private void hide(Label l)
-    {
+    private void hide(Label l) {
         l.setOpacity(0);
     }
 
-    private void hideAll(){
+    private void hideAll() {
         hide(TfUpdWithdrawLimit);
         hide(TfUpdOverdraftLimit);
         hide(TfUpdInterestRate);
@@ -338,10 +324,8 @@ public class AdminClientsController extends SwitchScenes
         hide(lblWithdraw);
     }
 
-    public void UpdateAccountOption()
-    {
-        if(selectedClient == null)
-        {
+    public void UpdateAccountOption() {
+        if(selectedClient == null) {
             showAlert(Alert.AlertType.ERROR, "Please Select a Client First", "Error");
 
             RbUpdateCurrent.setSelected(false);
@@ -350,10 +334,8 @@ public class AdminClientsController extends SwitchScenes
             return;
         }
 
-        if(RbUpdateSaving.isSelected())
-        {
-            if(selectedClient.savingsAcc != null)
-            {
+        if(RbUpdateSaving.isSelected()) {
+            if(selectedClient.savingsAcc != null) {
                 setVisibility(lblInterestRate);
                 setVisibility(TfUpdInterestRate);
                 setVisibility(lblInterestType);
@@ -363,18 +345,13 @@ public class AdminClientsController extends SwitchScenes
                 hide(lblWithdraw);
                 hide(TfUpdOverdraftLimit);
                 hide(TfUpdWithdrawLimit);
-            }
-            else
-            {
+            } else {
                 showAlert(Alert.AlertType.ERROR, "You don't have savings account", "Error");
                 RbUpdateSaving.setSelected(false);
                 hideAll();
             }
-        }
-        else if(RbUpdateCurrent.isSelected())
-        {
-            if(selectedClient.currentAcc != null)
-            {
+        } else if(RbUpdateCurrent.isSelected()) {
+            if(selectedClient.currentAcc != null) {
                 setVisibility(TfUpdOverdraftLimit);
                 setVisibility(lblOverdraft);
                 setVisibility(TfUpdWithdrawLimit);
@@ -384,9 +361,7 @@ public class AdminClientsController extends SwitchScenes
                 hide(lblInterestType);
                 hide(TfUpdInterestRate);
                 hide(CbUpdInterestType);
-            }
-            else
-            {
+            } else {
                 showAlert(Alert.AlertType.ERROR, "You don't have current account", "Error");
                 RbUpdateCurrent.setSelected(false);
                 hideAll();
@@ -394,9 +369,7 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    public void populateTableView()
-    {
-
+    public void populateTableView() {
 
         ObservableList<Client> data = FXCollections.observableArrayList(clients);
 
@@ -418,22 +391,19 @@ public class AdminClientsController extends SwitchScenes
         ClientsTable.setItems(data);
     }
 
-    private void showAlert(Alert.AlertType alertType, String message, String title)
-    {
+    private void showAlert(Alert.AlertType alertType, String message, String title) {
         Alert alert = new Alert(alertType, message, ButtonType.OK);
         alert.setHeaderText(null);
         alert.setTitle(title);
         alert.showAndWait();
     }
 
-    private void populateComboBoxes()
-    {
+    private void populateComboBoxes() {
         ObservableList<String> clientIDs = FXCollections.observableArrayList();
         ObservableList<String> savingsClientIDs = FXCollections.observableArrayList();
         ObservableList<String> currentClientIDs = FXCollections.observableArrayList();
 
-        for(Client c : clients)
-        {
+        for(Client c : clients) {
             clientIDs.add(c.getID());
             if (c.savingsAcc == null)
                 savingsClientIDs.add(c.getID());
@@ -450,35 +420,29 @@ public class AdminClientsController extends SwitchScenes
         CbCurrentCID.setItems(currentClientIDs);
     }
 
-    private boolean ValidateSelection()
-    {
+    private boolean ValidateSelection() {
         selectedClient = ClientsTable.getSelectionModel().getSelectedItem();
 
-        if(selectedClient == null)
-        {
+        if(selectedClient == null) {
             showAlert(Alert.AlertType.ERROR, "Please Select Client First", "Error");
             return false;
         }
         return true;
     }
 
-    public void DeleteClientMenuItemClicked()
-    {
-        if(ValidateSelection())
-        {
-            if(selectedClient.savingsAcc != null){
+    public void DeleteClientMenuItemClicked() {
+        if(ValidateSelection()) {
+            if(selectedClient.savingsAcc != null) {
                 selectedClient.savingsAcc.Delete(savingsAccounts);
             }
-            if (selectedClient.currentAcc != null){
+
+            if (selectedClient.currentAcc != null) {
                 selectedClient.currentAcc.Delete(currentAccounts);
             }
 
-            if(selectedClient.Delete(clients))
-            {
+            if(selectedClient.Delete(clients)) {
                 showAlert(Alert.AlertType.INFORMATION, "Client has been Deleted Successfully", "Deletion Completed");
-            }
-            else
-            {
+            } else {
                 showAlert(Alert.AlertType.INFORMATION, "Client hasn't been Deleted", "Deletion Failed");
             }
 
@@ -486,9 +450,8 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    public void UpdateClientMenuItemSelected()
-    {
-        if(ValidateSelection()){
+    public void UpdateClientMenuItemSelected() {
+        if(ValidateSelection()) {
             TfUpdFirstName.setText(selectedClient.getFirstName());
             TfUpdLastName.setText(selectedClient.getLastName());
             TfUpdPassword.setText(selectedClient.getPassword());
@@ -501,17 +464,14 @@ public class AdminClientsController extends SwitchScenes
     }
 
     public void TransactionsMenuItemClicked(ActionEvent event) throws IOException {
-        if(ValidateSelection()){
+        if(ValidateSelection()) {
             SwitchToAdminTransactions(event);
         }
     }
 
-    public void SavingsMenuItemClicked()
-    {
-        if(ValidateSelection())
-        {
-            if(selectedClient.savingsAcc != null)
-            {
+    public void SavingsMenuItemClicked() {
+        if(ValidateSelection()) {
+            if(selectedClient.savingsAcc != null) {
                 showAlert(Alert.AlertType.INFORMATION, "This Client Already have Savings Account", "Info");
                 return;
             }
@@ -526,12 +486,9 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    public void CurrentMenuItemClicked()
-    {
-        if(ValidateSelection())
-        {
-            if(selectedClient.currentAcc != null)
-            {
+    public void CurrentMenuItemClicked() {
+        if(ValidateSelection()) {
+            if(selectedClient.currentAcc != null) {
                 showAlert(Alert.AlertType.INFORMATION, "This Client Already have Current Account", "Info");
                 return;
             }
@@ -546,13 +503,12 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    public void cbUpdateClientIDItemChanged()
-    {
+    public void cbUpdateClientIDItemChanged() {
         resetScene();
 
         selectedClient = Client.Find(clients, CbUpdateCID.getValue());
 
-        if(selectedClient != null){
+        if(selectedClient != null) {
             TfUpdFirstName.setText(selectedClient.getFirstName());
             TfUpdLastName.setText(selectedClient.getLastName());
             TfUpdPassword.setText(selectedClient.getPassword());
@@ -561,11 +517,10 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    public void cbSavingsClientIDItemChanged()
-    {
+    public void cbSavingsClientIDItemChanged() {
         selectedClient = Client.Find(clients, CbSavingCID.getValue());
 
-        if(selectedClient != null){
+        if(selectedClient != null) {
             TfSavingsAddFirstName.setText(selectedClient.getFirstName());
             TfSavingsAddLastName.setText(selectedClient.getLastName());
             TfSavingsAddPassword.setText(selectedClient.getPassword());
@@ -574,11 +529,10 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    public void cbCurrentClientIDItemChanged()
-    {
+    public void cbCurrentClientIDItemChanged() {
         selectedClient = Client.Find(clients, CbCurrentCID.getValue());
 
-        if(selectedClient != null){
+        if(selectedClient != null) {
             TfCurrentAddFirstName.setText(selectedClient.getFirstName());
             TfCurrentAddLastName.setText(selectedClient.getLastName());
             TfCurrentAddPassword.setText(selectedClient.getPassword());
@@ -587,22 +541,19 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    private boolean addClientIsAnyOfFieldsEmpty()
-    {
+    private boolean addClientIsAnyOfFieldsEmpty() {
         return TfAddUsername.getText().isEmpty() || TfAddPassword.getText().isEmpty() ||
                 TfAddLastName.getText().isEmpty() || TfAddFirstName.getText().isEmpty() || TfAddPhone.getText().isEmpty();
     }
 
-    private boolean addSavingClientIsAnyOfFieldsEmpty()
-    {
+    private boolean addSavingClientIsAnyOfFieldsEmpty() {
         return TfSavingsAddInterestRate.getText().isEmpty() || TfSavingsAddFirstName.getText().isEmpty() ||
                 TfSavingsAddLastName.getText().isEmpty() || TfSavingsAddUsername.getText().isEmpty() ||
                 TfSavingsAddPassword.getText().isEmpty() || CbSavingsAddInterestType.getValue().isEmpty() ||
                 CbSavingCID.getValue().isEmpty() || TfSavingsAddPhone.getText().isEmpty();
     }
 
-    private boolean addCurrentClientIsAnyOfFieldsEmpty()
-    {
+    private boolean addCurrentClientIsAnyOfFieldsEmpty() {
         return TfCurrentAddWithdrawLimit.getText().isEmpty() || TfCurrentAddFirstName.getText().isEmpty() ||
                 TfCurrentAddLastName.getText().isEmpty() || TfCurrentAddUsername.getText().isEmpty() ||
                 TfCurrentAddPassword.getText().isEmpty() || TfCurrentAddOverdraftLimit.getText().isEmpty() ||
@@ -640,8 +591,7 @@ public class AdminClientsController extends SwitchScenes
 
     }
 
-    private Client createClientFromInput()
-    {
+    private Client createClientFromInput() {
         Client c = new Client();
 
         c.setFirstName(TfAddFirstName.getText());
@@ -654,8 +604,7 @@ public class AdminClientsController extends SwitchScenes
         c.setsAccountNum("-1");
 
 
-        if(RbAddCurrent.isSelected())
-        {
+        if(RbAddCurrent.isSelected()) {
 
             tpClients.getSelectionModel().select(tabCurrent);
             TfCurrentAddFirstName.setText(TfAddFirstName.getText());
@@ -666,8 +615,8 @@ public class AdminClientsController extends SwitchScenes
             CbCurrentCID.setValue(c.getID());
 
         }
-        if (RbAddSaving.isSelected())
-        {
+
+        if (RbAddSaving.isSelected()) {
 
             tpClients.getSelectionModel().select(tabSavings);
             TfSavingsAddFirstName.setText(TfAddFirstName.getText());
@@ -681,19 +630,17 @@ public class AdminClientsController extends SwitchScenes
         return c;
     }
 
-    public void AddClientButtClicked ()
-    {
+    public void AddClientButtClicked () {
 
         // Check if any of the fields are empty
-        if (addClientIsAnyOfFieldsEmpty())
-        {
+        if (addClientIsAnyOfFieldsEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Please fill all the empty fields", "Error");
             return;
         }
 
         // Confirmation Alert of the event
         Alert confirmationAlert = new Alert(Alert.AlertType.CONFIRMATION,
-                "Are you sure you want to add this Client BATHOTHY AND HANY?",
+                "Are you sure you want to add this Client?",
                 ButtonType.YES, ButtonType.NO);
         confirmationAlert.setHeaderText(null);
         confirmationAlert.setTitle("Confirmation");
@@ -701,8 +648,7 @@ public class AdminClientsController extends SwitchScenes
         // Show confirmation dialog and process response
         Optional<ButtonType> result = confirmationAlert.showAndWait();
 
-        if (result.isPresent() && result.get() == ButtonType.YES)
-        {
+        if (result.isPresent() && result.get() == ButtonType.YES) {
             Client c = createClientFromInput();
             selectedClient = c;
         }
@@ -710,11 +656,9 @@ public class AdminClientsController extends SwitchScenes
 
     }
 
-    public void AddSavingsClientButt ()
-    {
+    public void AddSavingsClientButt () {
         // Check if any of the fields are empty
-        if (addSavingClientIsAnyOfFieldsEmpty())
-        {
+        if (addSavingClientIsAnyOfFieldsEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Please fill all the empty fields", "Error");
             return;
         }
@@ -728,7 +672,7 @@ public class AdminClientsController extends SwitchScenes
 
         // Confirmation Alert of the event
         Alert confirmationAlert = new Alert(Alert.AlertType.CONFIRMATION,
-                "Are you sure you want to add this Client BATHOTHY AND HANY?",
+                "Are you sure you want to add Saving Account?",
                 ButtonType.YES, ButtonType.NO);
         confirmationAlert.setHeaderText(null);
         confirmationAlert.setTitle("Confirmation");
@@ -736,8 +680,7 @@ public class AdminClientsController extends SwitchScenes
         // Show confirmation dialog and process response
         Optional<ButtonType> result = confirmationAlert.showAndWait();
 
-        if (result.isPresent() && result.get() == ButtonType.YES)
-        {
+        if (result.isPresent() && result.get() == ButtonType.YES) {
             SavingsAccount s = new SavingsAccount("S" + (savingsAccounts.size()+101), selectedClient.getID());
 
 
@@ -760,11 +703,9 @@ public class AdminClientsController extends SwitchScenes
 
     }
 
-    public void AddCurrentClientButt ()
-    {
+    public void AddCurrentClientButt () {
         // Check if any of the fields are empty
-        if (addCurrentClientIsAnyOfFieldsEmpty())
-        {
+        if (addCurrentClientIsAnyOfFieldsEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Please fill all the empty fields", "Error");
             return;
         }
@@ -778,7 +719,7 @@ public class AdminClientsController extends SwitchScenes
 
         // Confirmation Alert of the event
         Alert confirmationAlert = new Alert(Alert.AlertType.CONFIRMATION,
-                "Are you sure you want to add this Client BATHOTHY AND HANY?",
+                "Are you sure you want to add Current Account?",
                 ButtonType.YES, ButtonType.NO);
         confirmationAlert.setHeaderText(null);
         confirmationAlert.setTitle("Confirmation");
@@ -786,8 +727,7 @@ public class AdminClientsController extends SwitchScenes
         // Show confirmation dialog and process response
         Optional<ButtonType> result = confirmationAlert.showAndWait();
 
-        if (result.isPresent() && result.get() == ButtonType.YES)
-        {
+        if (result.isPresent() && result.get() == ButtonType.YES) {
             CurrentAccount c = new CurrentAccount("C" + (currentAccounts.size()+101), selectedClient.getID());
             selectedClient.setcAccountNum(c.getAccountNumber());
 
@@ -812,10 +752,8 @@ public class AdminClientsController extends SwitchScenes
         }
     }
 
-    public void btnUpdateClientClicked()
-    {
-        if(!isAllUpdateFieldsAreFilled())
-        {
+    public void btnUpdateClientClicked() {
+        if(!isAllUpdateFieldsAreFilled()) {
             showAlert(Alert.AlertType.ERROR, "Please fill all the fields", "Error");
             return;
         }
@@ -831,47 +769,38 @@ public class AdminClientsController extends SwitchScenes
 
         // Show confirmation dialog and process response
         Optional<ButtonType> result = confirmationAlert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.YES)
-        {
+        if (result.isPresent() && result.get() == ButtonType.YES) {
             selectedClient.setFirstName(TfUpdFirstName.getText());
             selectedClient.setLastName(TfUpdLastName.getText());
             selectedClient.setUsername(TfUpdUsername.getText());
             selectedClient.setPassword(TfUpdPassword.getText());
 
-            if(RbUpdateSaving.isSelected()){
+            if(RbUpdateSaving.isSelected()) {
                 selectedClient.savingsAcc.setAccountInterestRate(Double.parseDouble(TfUpdInterestRate.getText()));
                 selectedClient.savingsAcc.setAccountInterestType(CbUpdInterestType.getValue());
 
-                if (selectedClient.savingsAcc.Update(savingsAccounts) && selectedClient.Save(clients)){
+                if (selectedClient.savingsAcc.Update(savingsAccounts) && selectedClient.Save(clients)) {
                     isUpdated = true;
                 }
-            }
-
-            else if (RbUpdateCurrent.isSelected())
-            {
+            } else if (RbUpdateCurrent.isSelected()) {
                 selectedClient.currentAcc.setOverdraftLimit(Double.parseDouble(TfUpdOverdraftLimit.getText()));
                 selectedClient.currentAcc.setWithdrawLimit(Double.parseDouble(TfUpdWithdrawLimit.getText()));
 
-                if (selectedClient.currentAcc.Update(currentAccounts) && selectedClient.Save(clients))
-                {
+                if (selectedClient.currentAcc.Update(currentAccounts) && selectedClient.Save(clients)) {
                     isUpdated = true;
                 }
             }
         }
 
-        if(isUpdated)
-        {
+        if(isUpdated) {
             showAlert(Alert.AlertType.INFORMATION, "Client has been updated", "Updated");
             updateScene();
-        }
-        else
-        {
+        } else {
             showAlert(Alert.AlertType.ERROR, "Updating Failed!", "Error");
         }
     }
 
-    private boolean isAllUpdateFieldsAreFilled()
-    {
+    private boolean isAllUpdateFieldsAreFilled() {
         boolean areCommonFieldsFilled =
                 !TfUpdFirstName.getText().isEmpty() &&
                         !TfUpdLastName.getText().isEmpty() &&

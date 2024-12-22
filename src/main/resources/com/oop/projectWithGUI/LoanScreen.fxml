@@ -84,27 +84,27 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Label layoutX="13.0" layoutY="85.0" text="Name" textFill="#3886d6">
+                                    <Label layoutX="13.0" layoutY="85.0" text="Name:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="13.0" layoutY="235.0" text="Amount" textFill="#3886d6">
+                                    <Label layoutX="13.0" layoutY="235.0" text="Amount:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="13.0" layoutY="285.0" text="Type of Loan" textFill="#3886d6">
+                                    <Label layoutX="13.0" layoutY="285.0" text="Type of Loan:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="13.0" layoutY="335.0" text="Loan Term" textFill="#3886d6">
+                                    <Label layoutX="13.0" layoutY="335.0" text="Loan Term:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="13.0" layoutY="385.0" text="Interest Rate" textFill="#3886d6">
+                                    <Label layoutX="13.0" layoutY="385.0" text="Interest Rate:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
@@ -121,12 +121,12 @@
                                           <Font name="System Italic" size="12.0" />
                                        </font>
                                     </CheckBox>
-                                    <Label layoutX="13.0" layoutY="135.0" text="Gender" textFill="#3886d6">
+                                    <Label layoutX="13.0" layoutY="135.0" text="Gender:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="13.0" layoutY="185.0" text="Phone Number" textFill="#3886d6">
+                                    <Label layoutX="13.0" layoutY="185.0" text="Phone Number:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
@@ -158,12 +158,12 @@
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <Label fx:id="lbFullName" layoutX="82.0" layoutY="85.0" text="full name" textFill="#617073">
+                                    <Label fx:id="lbFullName" layoutX="82.0" layoutY="85.0" text="full name">
                                        <font>
                                           <Font name="Segoe UI Bold" size="22.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbPhoneNum" layoutX="150.0" layoutY="185.0" prefHeight="18.0" prefWidth="179.0" text="phoneNum" textFill="#617073">
+                                    <Label fx:id="lbPhoneNum" layoutX="150.0" layoutY="185.0" prefHeight="18.0" prefWidth="179.0" text="phoneNum">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -226,12 +226,12 @@
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanID" layoutX="120.0" layoutY="85.0" text="null" textFill="#617073">
+                                    <Label fx:id="lbLoanID" layoutX="120.0" layoutY="85.0" text="null">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbName" layoutX="90.0" layoutY="135.0" text="null" textFill="#617073">
+                                    <Label fx:id="lbName" layoutX="90.0" layoutY="135.0" text="null">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -241,7 +241,7 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanType" layoutX="120.0" layoutY="235.0" text="null" textFill="#617073">
+                                    <Label fx:id="lbLoanType" layoutX="120.0" layoutY="235.0" text="null">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -251,22 +251,22 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbExpiryDate" layoutX="159.0" layoutY="435.0" text="null" textFill="#617073">
+                                    <Label fx:id="lbExpiryDate" layoutX="159.0" layoutY="435.0" text="null">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanStatus" layoutX="135.0" layoutY="385.0" text="null" textFill="#617073">
+                                    <Label fx:id="lbLoanStatus" layoutX="135.0" layoutY="385.0" text="null">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbInterestRate" layoutX="150.0" layoutY="335.0" text="null" textFill="#617073">
+                                    <Label fx:id="lbInterestRate" layoutX="150.0" layoutY="335.0" text="null">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanTerm" layoutX="120.0" layoutY="285.0" text="null" textFill="#617073">
+                                    <Label fx:id="lbLoanTerm" layoutX="120.0" layoutY="285.0" text="null">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -304,7 +304,7 @@
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="310.0" layoutY="315.0" text="Interest rate:" textFill="#3886d6">
+                                    <Label layoutX="314.0" layoutY="315.0" text="Interest rate:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
@@ -314,7 +314,7 @@
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="250.0" layoutY="355.0" text="Remaining Amount:" textFill="#3886d6">
+                                    <Label layoutX="256.0" layoutY="355.0" text="Remaining Amount:" textFill="#3886d6">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
@@ -333,12 +333,12 @@
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanID1" layoutX="462.0" layoutY="115.0" text="Label" textFill="#617073">
+                                    <Label fx:id="lbLoanID1" layoutX="462.0" layoutY="115.0" text="Label">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanStatus1" layoutX="462.0" layoutY="155.0" text="Label" textFill="#617073">
+                                    <Label fx:id="lbLoanStatus1" layoutX="462.0" layoutY="155.0" text="Label">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
@@ -348,17 +348,17 @@
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanTerm1" layoutX="462.0" layoutY="235.0" text="Label" textFill="#617073">
+                                    <Label fx:id="lbLoanTerm1" layoutX="462.0" layoutY="235.0" text="Label">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbLoanType1" layoutX="462.0" layoutY="275.0" text="Label" textFill="#617073">
+                                    <Label fx:id="lbLoanType1" layoutX="462.0" layoutY="275.0" text="Label">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbInterestRate1" layoutX="462.0" layoutY="315.0" text="Label" textFill="#617073">
+                                    <Label fx:id="lbInterestRate1" layoutX="462.0" layoutY="315.0" text="Label">
                                        <font>
                                           <Font name="Segoe UI" size="18.0" />
                                        </font>

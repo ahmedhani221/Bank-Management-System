@@ -174,8 +174,8 @@ public class LoanController extends SwitchScenes {
         }
 
         double amount = Double.parseDouble(tfAmount.getText());
-        if (amount < 10) {
-            showAlert(Alert.AlertType.ERROR, "Can't Enter Amount less than 10", "Error");
+        if (amount < 10000) {
+            showAlert(Alert.AlertType.ERROR, "Can't Enter Amount less than 10000", "Error");
             return;
         }
 
