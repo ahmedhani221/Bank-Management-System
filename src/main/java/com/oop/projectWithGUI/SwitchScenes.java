@@ -38,6 +38,15 @@ public class SwitchScenes {
         stage.show();
     }
 
+    public void SwitchToAdmin(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("AdminManage.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Home Page");
+        stage.show();
+    }
+
     public void SwitchToAdminHome(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("AdminHome.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
